@@ -1,0 +1,21 @@
+name = "entre-nos-natal-2026"
+main = "src/index.js"
+compatibility_date = "2026-10-25"
+
+# Ajuste para o endereço real do GitHub Pages, sem barra final.
+[vars]
+FRONTEND_ORIGIN = "https://alexispher.github.io"
+FROM_EMAIL = "Entre Nós <sorteio@SEU-DOMINIO.com>"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "entre-nos-natal-2026"
+database_id = "SUBSTITUA_PELO_ID_DO_D1"
+migrations_dir = "migrations"
+
+[triggers]
+crons = ["* * * * *"]
+
+# Evita armazenar logs de requisições e respostas por padrão.
+[observability]
+enabled = false
